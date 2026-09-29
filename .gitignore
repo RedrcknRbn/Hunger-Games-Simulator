@@ -12,3 +12,12 @@ profile.svg
 
 # Time trace
 trace.json
+
+# VS Code Stuff
+.vscode/
+
+# Environments
+.env
+.venv
+env/
+ENV/
