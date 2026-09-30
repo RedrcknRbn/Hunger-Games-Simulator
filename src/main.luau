@@ -44,6 +44,7 @@ end
 
 -- Requests the user to pick a season from the SeasonData folder, and returns the name of the folder.
 function seasonSelection()
+	fs.makedir("./SeasonData",{error_if_exists = false})
 	local seasonFolders = fs.listdir("./SeasonData", false, function(path: string)
 		return if string.match(path, "Season%w") then true else false
 	end)
