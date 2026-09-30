@@ -1,9 +1,30 @@
 {
-  "default": {
-    "Nick": "Nickname",
-    "Name": "Firstname Lastname",
+  "Shmarley": {
+    "Nick": "Shmarley",
+    "Name": "Shmarles Shmarlington",
+    "Gender": "m",
+    "Icon": "Shmarley.png",
+    "DeathChance": 1
+  },
+  "qi9r": {
+    "Nick": "qi9r",
+    "Name": "qi9r",
+    "Gender": "m",
+    "Icon": "qi9r.png",
+    "DeathChance": 1
+  },
+  "Videoconsole": {
+    "Nick": "Video",
+    "Name": "Videoconsole",
+    "Gender": "m",
+    "Icon": "Videoconsole",
+    "DeathChance": 1
+  },
+  "Red": {
+    "Nick": "Red",
+    "Name": "RedrcknRbn",
     "Gender": "nb",
-    "Icon": "default.png",
+    "Icon": "Red.png",
     "DeathChance": 1
   }
 }

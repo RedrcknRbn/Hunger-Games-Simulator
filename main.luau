@@ -6,7 +6,6 @@ local prompt = require("@std/io/prompt")
 local colors = require("@std/io/colors")
 local time = require("@std/time")
 local fs = require("@std/fs")
-local path = require("@std/fs/path")
 local _json = require("@std/serde/json")
 
 -- Helper Modules
@@ -67,6 +66,19 @@ end
 function prepareForSimulation(seasonFolder: string)
 	print(colors.green(string.format("Preparing to simulate %s...", seasonFolder)))
     characters.verifyAndReturnCharacterData(seasonFolder .. "/characters.json")
+    print(colors.green("Character data verified."))
+    local opt = prompt.pick("What would you like to do?", {
+		"Manage character data",
+		colors.red("Exit"),
+	})
+
+	if opt == 1 then
+		characters.characterManager(seasonFolder .. "/characters.json")
+		prepareForSimulation(seasonFolder)
+	elseif opt == 2 then
+		print(colors.bold.red("Exiting..."))
+		return
+	end
 end
 
 entry()
