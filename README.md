@@ -22,6 +22,8 @@ Run using [Seal](https://github.com/seal-runtime/seal) by `seal ./main.luau`
 
 You can easily create new Season Data by going to `./SeasonData/Season#/`, and modifying JSON data from any of my seasons!
 
+Alternatively, the built-in UI allows you to easily create and manage both character and district data, allowing for easy data creation!
+
 ## Notices
 
 This project is licensed under [GNU GENERAL PUBLIC LICENSE v3](https://www.gnu.org/licenses/gpl-3.0.html), and is in no way affiliated with or endorsed by Roblox, the Luau team, Brantsteele, or Seal Runtime
