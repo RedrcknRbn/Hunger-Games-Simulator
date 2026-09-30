@@ -10,6 +10,7 @@ local _json = require("@std/serde/json")
 -- Helper Modules
 local settings = require("./Modules/settings")
 local characters = require("./Modules/characters")
+local districts = require("./Modules/districts")
 
 -- The "entrypoint" of sorts for the program.
 function entry()
@@ -28,7 +29,7 @@ function entry()
 
 	if opt == 1 then
 		print(colors.green("Loading Simulation Data..."))
-		prepareForSimulation(seasonSelection())
+		manageSimulation(seasonSelection())
 	elseif opt == 2 then
 		print(colors.red("This feature is not yet implemented."))
 		entry()
@@ -56,19 +57,23 @@ function seasonSelection()
 	return seasonFolders[seasonPath]
 end
 
-function prepareForSimulation(seasonFolder: string)
-	print(colors.green(string.format("Preparing to simulate %s...", seasonFolder)))
+function manageSimulation(seasonFolder: string)
+	print(colors.green(string.format("Preparing to manage simulation %s...", seasonFolder)))
 	characters.verifyAndReturnCharacterData(seasonFolder .. "/characters.json")
 	print(colors.green("Character data verified."))
 	local opt = prompt.pick("What would you like to do?", {
 		"Manage character data",
+        "Manage District data",
 		colors.red("Exit"),
 	})
 
 	if opt == 1 then
 		characters.characterManager(seasonFolder .. "/characters.json")
-		prepareForSimulation(seasonFolder)
+		manageSimulation(seasonFolder)
 	elseif opt == 2 then
+        districts.districtManager(seasonFolder .. "/districts.json")
+		manageSimulation(seasonFolder)
+	elseif opt == 3 then
 		entry()
 		return
 	end
