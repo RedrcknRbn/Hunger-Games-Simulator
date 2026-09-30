@@ -18,11 +18,25 @@ This codebase has been made public in hopes that others, with similar needs such
 
 ## Usage
 
-Run using [Seal](https://github.com/seal-runtime/seal) by `seal ./main.luau`
-
 You can easily create new Season Data by going to `./SeasonData/Season#/`, and modifying JSON data from any of my seasons!
 
 Alternatively, the built-in UI allows you to easily create and manage both character and district data, allowing for easy data creation!
+
+### Running from Source
+
+Run using [Seal](https://github.com/seal-runtime/seal) by `seal src/main.luau`
+
+### Running from Release
+
+[We often offer releases after big work milestones, here are some options for the releases!](https://github.com/RedrcknRbn/Pulus-Games/releases/)
+
+#### LUAU
+
+Run using [Seal](https://github.com/seal-runtime/seal) by `seal HungerGames_src.luau`
+
+#### BINARY
+
+Execute `HungerGames_x64.exe`
 
 ## Notices
 
