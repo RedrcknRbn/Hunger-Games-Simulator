@@ -1,0 +1,9 @@
+{
+  "default": {
+    "Nick": "Nickname",
+    "Name": "Firstname Lastname",
+    "Gender": "nb",
+    "Icon": "default.png",
+    "DeathChance": 1
+  }
+}
