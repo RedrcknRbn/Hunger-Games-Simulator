@@ -100,7 +100,7 @@ function DistrictModule.shuffleDistricts(seasonPath: string, charactersPerDistri
 			currentDistrict += 1
 			districtTable = { Name = "District", Members = {} }
 		end
-        
+
 		table.insert(districtTable.Members, chosenCharacterID)
 		table.remove(remainingCharactersIDs, randIndex)
 	end
@@ -108,6 +108,7 @@ function DistrictModule.shuffleDistricts(seasonPath: string, charactersPerDistri
 	if districtTable then
 		districtTable.Name = "District " .. currentDistrict
 		table.insert(data, districtTable)
+        print(self.stringifyDistrictData(districtTable))
 	end
 
 	json.writefile(seasonPath, data)

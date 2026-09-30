@@ -90,32 +90,11 @@
     "Icon": "GenAI",
     "DeathChance": 2
   },
-  "Videoconsole": {
-    "Nick": "Video",
-    "Name": "Videoconsole",
-    "Gender": "m",
-    "Icon": "Videoconsole",
-    "DeathChance": 1
-  },
-  "FoodCat": {
-    "Nick": "Food",
-    "Name": "Food the Cat",
+  "Sarfog": {
+    "Nick": "Evelyn",
+    "Name": "Sarfog",
     "Gender": "f",
-    "Icon": "Food",
-    "DeathChance": 1
-  },
-  "Terralotl": {
-    "Nick": "Terra",
-    "Name": "Terralotl",
-    "Gender": "f",
-    "Icon": "Terra",
-    "DeathChance": 1
-  },
-  "MagicNumber9960": {
-    "Nick": "Magic",
-    "Name": "Magic Number",
-    "Gender": "m",
-    "Icon": "Magic",
+    "Icon": "Sarfog",
     "DeathChance": 1
   },
   "Omega3850": {
@@ -125,11 +104,32 @@
     "Icon": "Omega",
     "DeathChance": 1
   },
-  "Sarfog": {
-    "Nick": "Evelyn",
-    "Name": "Sarfog",
+  "FoodCat": {
+    "Nick": "Food",
+    "Name": "Food the Cat",
     "Gender": "f",
-    "Icon": "Sarfog",
+    "Icon": "Food",
+    "DeathChance": 1
+  },
+  "MagicNumber9960": {
+    "Nick": "Magic",
+    "Name": "Magic Number",
+    "Gender": "m",
+    "Icon": "Magic",
+    "DeathChance": 1
+  },
+  "Terralotl": {
+    "Nick": "Terra",
+    "Name": "Terralotl",
+    "Gender": "f",
+    "Icon": "Terra",
+    "DeathChance": 1
+  },
+  "Videoconsole": {
+    "Nick": "Video",
+    "Name": "Videoconsole",
+    "Gender": "m",
+    "Icon": "Videoconsole",
     "DeathChance": 1
   },
   "Palck": {
