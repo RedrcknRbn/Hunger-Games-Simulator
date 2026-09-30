@@ -1,0 +1,6 @@
+{
+  "ExportPath": "./results/",
+  "ExportJSON": true,
+  "ExportImages": true,
+  "PrintResults": true
+}

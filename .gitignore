@@ -203,6 +203,4 @@ cython_debug/
 .seal/
 
 # etc
-.src/
-/src
 /.vscode
