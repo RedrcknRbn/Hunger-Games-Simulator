@@ -30,7 +30,7 @@ local settingkeys = {
 	"PrintResults",
 }
 
--- Verifies the settings file exists and is valid, and returns the settings table.
+-- Verifies the settings file exists and is valid, and returns the settings table. Should ideally be called before any other settings functions are called.
 function SettingsModule.verifyAndReturnSettings()
 	local data = nil
 
@@ -49,6 +49,32 @@ function SettingsModule.verifyAndReturnSettings()
 	end
 
 	return data
+end
+
+-- helper funcs
+function SettingsModule.getSetting(settingName: string)
+    local data = self.verifyAndReturnSettings()
+    return data[settingName]
+end
+
+function SettingsModule.setSetting(settingName: string, value: any)
+    local data = self.verifyAndReturnSettings()
+    data[settingName] = value
+    json.writefile("./settings.json", data)
+end
+
+function SettingsModule.getAllSettings()
+    local data = self.verifyAndReturnSettings()
+    return data
+end
+
+function SettingsModule.StringifySettings()
+    local data = self.verifyAndReturnSettings()
+    local str = ""
+    for k, v in pairs(data) do
+        str = str .. string.format("%s: %s\n", k, tostring(v))
+    end
+    return str
 end
 
 -- Handles the settings editor
@@ -74,13 +100,13 @@ function SettingsModule.settingsEditor()
 		print(colors.yellow(string.format("Current value of %s: %s", setting, colors.cyan(tostring(data[setting])))))
 		if typeof(data[setting]) == "boolean" then
 			local newValue = prompt.confirm("Would you like this setting enabled?")
-			data[setting] = newValue
+			self.setSetting(setting, tonumber(newValue))
 		elseif typeof(data[setting]) == "string" then
 			local newValue = prompt.text("Enter new value: ")
-			data[setting] = tostring(newValue)
+			self.setSetting(setting, newValue)
         elseif typeof(data[setting]) == "number" then
 			local newValue = prompt.text("Enter new value: ")
-			data[setting] = tonumber(newValue)
+			self.setSetting(setting, tonumber(newValue))
         else
             print(colors.bold.red("Error: Weird data type detected. Please check the settings file."))
 		end

@@ -20,21 +20,7 @@ function entry()
 
 	time.wait(0.5)
 
-	local data = settings.verifyAndReturnSettings()
-
-	print(
-		string.format(
-			[[Current Settings: 
-Export Path: %s
-Export Images: %s
-Export JSON: %s
-Print Results: %s]],
-			data.ExportPath,
-			tostring(data.ExportImages),
-			tostring(data.ExportJSON),
-			tostring(data.PrintResults)
-		)
-	)
+	print(colors.yellow(settings.StringifySettings()))
 
 	time.wait(0.5)
 
@@ -42,7 +28,7 @@ Print Results: %s]],
 		"Start a new simulation using current settings",
 		"Grab old simulation results",
 		"Change settings",
-        colors.red("Exit"),
+		colors.red("Exit"),
 	})
 
 	if opt == 1 then
@@ -52,7 +38,7 @@ Print Results: %s]],
 		entry()
 	elseif opt == 3 then
 		settings.settingsEditor()
-        entry()
+		entry()
 	elseif opt == 4 then
 		print(colors.bold.red("Exiting..."))
 		return
