@@ -16,11 +16,11 @@ local DefaultSettings = {
 
 -- The "entrypoint" of sorts for the program.
 function entry()
-	print("Welcome to the Hunger Games!")
+	print(colors.bold.yellow("Welcome to the Hunger Games!"))
 
 	time.wait(0.1)
 
-	print("Inspired by BrantSteele, created by RedrcknRbn")
+	print(colors.bold.yellow("Inspired by BrantSteele, created by RedrcknRbn"))
 
 	time.wait(0.5)
 
@@ -46,6 +46,7 @@ Print Results: %s]],
 		"Start a new simulation using current settings",
 		"Grab old simulation results",
 		"Change settings",
+        colors.red("Exit"),
 	})
 
 	if opt == 1 then
@@ -54,8 +55,7 @@ Print Results: %s]],
 		print(colors.red("This feature is not yet implemented. Please check back later."))
 		entry()
 	elseif opt == 3 then
-		print(colors.red("This feature is not yet implemented. Please check back later."))
-		entry()
+		settingsEditor()
 	end
 end
 
@@ -72,12 +72,56 @@ function verifyAndReturnSettings()
 		if err then
 			print(colors.red("Error reading settings file: " .. tostring(err)))
 		end
-		print(colors.red("Settings file not found. Creating default settings..."))
+		print(colors.red("Settings file not found or otherwise invalid. Creating default settings..."))
 		json.writefile("./settings.json", DefaultSettings)
 		return DefaultSettings
 	end
 
 	return data
+end
+
+function settingsEditor()
+    local data = verifyAndReturnSettings()
+
+    print(colors.bold.yellow("Welcome to the Settings Editor!"))
+
+    for setting, value in pairs(data) do
+        print(string.format("%s: %s", colors.yellow(setting), colors.cyan(tostring(value))))
+    end
+
+    local settingToChange = prompt.pick("Which setting would you like to change?", {
+        "Export Path",
+        "Export Images",
+        "Export JSON",
+        "Print Results",
+        colors.red("Go back to main menu"),
+    })
+
+    if settingToChange == 5 then
+        entry()
+        return
+    end
+
+    local settingKeys = { "ExportPath", "ExportImages", "ExportJSON", "PrintResults" }
+    local settingName = settingKeys[settingToChange]
+
+    if settingName ~= nil then
+        print(colors.yellow(string.format("Current value of %s: %s", settingName, colors.cyan(tostring(data[settingName])))))
+        if data[settingName] == true or data[settingName] == false then
+            local newValue = prompt.confirm("Would you like this setting enabled?")
+            data[settingName] = newValue
+        else
+            local newValue = prompt.text("Enter new value: ")
+            data[settingName] = newValue
+        end
+		json.writefile("./settings.json", data)
+        print(colors.green(string.format("Setting %s updated to: %s", settingName, colors.cyan(tostring(data[settingName])))))
+        settingsEditor()
+    else
+        print(colors.red("Invalid setting selected."))
+        settingsEditor()
+    end
+
 end
 
 entry()
