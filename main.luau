@@ -4,7 +4,6 @@
 local _input = require("@std/io/input")
 local prompt = require("@std/io/prompt")
 local colors = require("@std/io/colors")
-local time = require("@std/time")
 local fs = require("@std/fs")
 local _json = require("@std/serde/json")
 
@@ -16,25 +15,19 @@ local characters = require("./Modules/characters")
 function entry()
 	print(colors.bold.yellow("Welcome to the Hunger Games!"))
 
-	time.wait(0.1)
-
 	print(colors.bold.yellow("Inspired by BrantSteele, created by RedrcknRbn"))
-
-	time.wait(0.5)
 
 	print(colors.yellow(settings.StringifySettings()))
 
-	time.wait(0.5)
-
 	local opt = prompt.pick("What would you like to do?", {
-		"Start a new simulation using current settings",
+		"Manage Simulations",
 		"Grab old simulation results",
 		"Change settings",
 		colors.red("Exit"),
 	})
 
 	if opt == 1 then
-		print(colors.green("Starting a new simulation..."))
+		print(colors.green("Loading Simulation Data..."))
 		prepareForSimulation(seasonSelection())
 	elseif opt == 2 then
 		print(colors.red("This feature is not yet implemented."))
@@ -53,21 +46,21 @@ function seasonSelection()
 	local seasonFolders = fs.listdir("./SeasonData", false, function(path: string)
 		return if string.match(path, "Season%w") then true else false
 	end)
-    -- :(
-    if seasonFolders == nil or #seasonFolders == 0 then
-        print(colors.bold.red("Error: No season folders found in ./SeasonData. Creating a Season 1 Folder."))
-        fs.makedir("./SeasonData/Season1", {error_if_exists = false})
-        seasonFolders = {"./SeasonData/Season1"}
-    end
+	-- :(
+	if seasonFolders == nil or #seasonFolders == 0 then
+		print(colors.bold.red("Error: No season folders found in ./SeasonData. Creating a Season 1 Folder."))
+		fs.makedir("./SeasonData/Season1", { error_if_exists = false })
+		seasonFolders = { "./SeasonData/Season1" }
+	end
 	local seasonPath = prompt.pick("Which season would you like to simulate?", seasonFolders, 1)
-    return seasonFolders[seasonPath]
+	return seasonFolders[seasonPath]
 end
 
 function prepareForSimulation(seasonFolder: string)
 	print(colors.green(string.format("Preparing to simulate %s...", seasonFolder)))
-    characters.verifyAndReturnCharacterData(seasonFolder .. "/characters.json")
-    print(colors.green("Character data verified."))
-    local opt = prompt.pick("What would you like to do?", {
+	characters.verifyAndReturnCharacterData(seasonFolder .. "/characters.json")
+	print(colors.green("Character data verified."))
+	local opt = prompt.pick("What would you like to do?", {
 		"Manage character data",
 		colors.red("Exit"),
 	})
@@ -76,7 +69,7 @@ function prepareForSimulation(seasonFolder: string)
 		characters.characterManager(seasonFolder .. "/characters.json")
 		prepareForSimulation(seasonFolder)
 	elseif opt == 2 then
-		print(colors.bold.red("Exiting..."))
+		entry()
 		return
 	end
 end

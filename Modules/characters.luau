@@ -109,7 +109,7 @@ function CharacterModule.characterDataEditor(seasonPath: string, oldCharacterDat
 
     local CharacterID = prompt.text("Enter the UNIQUE character ID of the character: ")
 
-    print(colors.yellow("The following is the data for the new character:"))
+    print(colors.yellow("The following is the data for the new character: "..CharacterID))
     print(self.stringifyCharacterData(newCharacter))
     if prompt.confirm("Do you want to save this character?") then
         data[CharacterID] = newCharacter
