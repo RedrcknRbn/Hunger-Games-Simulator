@@ -1,0 +1,142 @@
+{
+  "JeremySnake": {
+    "Nick": "Jeremy",
+    "Name": "Jeremy the Snake",
+    "Gender": "m",
+    "Icon": "Jeremy",
+    "DeathChance": 1
+  },
+  "OSCDex": {
+    "Nick": "OSCDex",
+    "Name": "OSCDex",
+    "Gender": "p",
+    "Icon": "Oscdex",
+    "DeathChance": 2
+  },
+  "Kr0pla": {
+    "Nick": "Kropla",
+    "Name": "Kr0pla",
+    "Gender": "m",
+    "Icon": "Kropla",
+    "DeathChance": 1
+  },
+  "Shmarley": {
+    "Nick": "Shmarley",
+    "Name": "Shmarles Shmarlington",
+    "Gender": "m",
+    "Icon": "Shmarley.png",
+    "DeathChance": 1
+  },
+  "Candi": {
+    "Nick": "Meri",
+    "Name": "Meri",
+    "Gender": "f",
+    "Icon": "Candi",
+    "DeathChance": 1
+  },
+  "deFoliking": {
+    "Nick": "Foliking",
+    "Name": "de Foliking",
+    "Gender": "m",
+    "Icon": "Foliking",
+    "DeathChance": 1
+  },
+  "Red": {
+    "Nick": "Red",
+    "Name": "RedrcknRbn",
+    "Gender": "nb",
+    "Icon": "Red.png",
+    "DeathChance": 1
+  },
+  "StupidityDX": {
+    "Nick": "Stu",
+    "Name": "StupidityDX",
+    "Gender": "f",
+    "Icon": "Stu",
+    "DeathChance": 1
+  },
+  "Stitches": {
+    "Nick": "Stitches",
+    "Name": "Stitches",
+    "Gender": "nb",
+    "Icon": "Stitches",
+    "DeathChance": 1
+  },
+  "qi9r": {
+    "Nick": "qi9r",
+    "Name": "qi9r",
+    "Gender": "m",
+    "Icon": "qi9r.png",
+    "DeathChance": 1
+  },
+  "SparkyGD": {
+    "Nick": "Sparky",
+    "Name": "Sparky GD",
+    "Gender": "p",
+    "Icon": "Sparky",
+    "DeathChance": 2
+  },
+  "Scout493": {
+    "Nick": "Scout",
+    "Name": "Scout493",
+    "Gender": "m",
+    "Icon": "RedDiscord",
+    "DeathChance": 1
+  },
+  "GenAI": {
+    "Nick": "GenAI",
+    "Name": "Homophobic Steve Cobs Inanimate Insanity",
+    "Gender": "nb",
+    "Icon": "GenAI",
+    "DeathChance": 2
+  },
+  "Sarfog": {
+    "Nick": "Evelyn",
+    "Name": "Sarfog",
+    "Gender": "f",
+    "Icon": "Sarfog",
+    "DeathChance": 1
+  },
+  "Omega3850": {
+    "Nick": "Omega",
+    "Name": "Omega 3850",
+    "Gender": "m",
+    "Icon": "Omega",
+    "DeathChance": 1
+  },
+  "FoodCat": {
+    "Nick": "Food",
+    "Name": "Food the Cat",
+    "Gender": "f",
+    "Icon": "Food",
+    "DeathChance": 1
+  },
+  "MagicNumber9960": {
+    "Nick": "Magic",
+    "Name": "Magic Number",
+    "Gender": "m",
+    "Icon": "Magic",
+    "DeathChance": 1
+  },
+  "Terralotl": {
+    "Nick": "Terra",
+    "Name": "Terralotl",
+    "Gender": "f",
+    "Icon": "Terra",
+    "DeathChance": 1
+  },
+  "Videoconsole": {
+    "Nick": "Video",
+    "Name": "Videoconsole",
+    "Gender": "m",
+    "Icon": "Videoconsole",
+    "DeathChance": 1
+  },
+  "Palck": {
+    "Nick": "Palck",
+    "Name": "Palck",
+    "Gender": "f",
+    "Icon": "Palck",
+    "DeathChance": 1
+  }
+}

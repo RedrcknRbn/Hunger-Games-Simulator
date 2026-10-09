@@ -1,0 +1,39 @@
+{
+    "Bloodbath": {
+        "1": [
+            [
+                "t_PLAYER1",
+                ["grabs a","grabs a","grabs a","grab a"],
+                "t_ITEM",
+                "t_RETREAT",
+                "r_ItemObtained"
+            ]
+        ],
+        "2": [
+            [
+                "t_PLAYER1",
+                "and",
+                "t_PLAYER2",
+                "fight for a",
+                "t_ITEM",
+                ".",
+                "t_RANDPLAYER",
+                ["gives up","gives up","gives up","give up"],
+                "t_RETREAT",
+                "r_ItemObtained"
+            ],
+            [
+                "t_PLAYER1",
+                "and",
+                "t_PLAYER2",
+                "fight for a",
+                "t_ITEM",
+                ".",
+                "t_RANDPLAYER",
+                ["dies","dies","dies","die"],
+                "from the fight.",
+                "r_ItemObtained"
+            ]
+        ]
+    }
+}
