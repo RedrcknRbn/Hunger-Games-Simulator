@@ -204,5 +204,6 @@ cython_debug/
 .seal/
 
 # etc
-/.vscode
-/bin
+.vscode/
+bin/
+SeasonData/
