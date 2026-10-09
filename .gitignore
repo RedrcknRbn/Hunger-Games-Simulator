@@ -2,6 +2,7 @@
 #
 # https://github.com/luau-lang/luau
 # https://luau.org/
+.luaurc/
 
 # Code coverage
 coverage.out
