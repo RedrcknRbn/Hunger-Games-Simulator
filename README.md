@@ -1,20 +1,7 @@
-# Pulus Games
-The Pulus Games is a personal Hunger-Games/Big-Brother styled event that happens, where the characters are my friends!
+# Hunger Games Simulator
+The Hunger Games Simulator is a local Hunger-Games/Big-Brother simulator
 
 This is a local remake of [BrantSteele's Hunger Games Simulation](https://brantsteele.com/hungergames/classic/), made using [Roblox's Luau programming language](https://luau.org/), powered by [Seal-Runtime](https://github.com/seal-runtime/seal).
-
-## Explanation
-
-We've decided to split from BrantSteele's version due to many reasons, the most important being the automatic export of day-by-day logs as images, so that way I don't get spoiled as GM, and so that way I don't have to resimulate the entire game from the start whenever a new day happens.
-
-This also gives me extra freedom to make more custom events, and be able to use images without having to reformat them.
-
-I'm using Luau via Seal instead of something like Python because,
-
-1. I have more experience with Luau than I do Python
-2. Seal gives me extra tools that base Luau is missing.
-
-This codebase has been made public in hopes that others, with similar needs such as my own!
 
 ## Usage
 
@@ -37,6 +24,19 @@ Run using [Seal](https://github.com/seal-runtime/seal) by `seal HungerGames_src.
 #### BINARY
 
 Execute `HungerGames_x64.exe`
+
+## Explanation
+
+I've decided to split from BrantSteele's Online version due to many reasons, the most important being the automatic export of day-by-day logs as images, so that way I don't get spoiled as GM, and so that way I don't have to resimulate the entire game from the start whenever a new day happens.
+
+This also gives me extra freedom to make more custom events, and be able to use images without having to reformat them.
+
+I'm using Luau via Seal instead of something like Python because,
+
+1. I have more experience with Luau than I do Python
+2. Seal gives me extra tools that base Luau is missing.
+
+This codebase has been made public in hopes that others, with similar needs such as my own!
 
 ## Notices
 
