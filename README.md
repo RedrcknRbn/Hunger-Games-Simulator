@@ -9,21 +9,9 @@ You can easily create new Season Data by going to `./SeasonData/Season#/`, and m
 
 Alternatively, the built-in UI allows you to easily create and manage both character and district data, allowing for easy data creation!
 
-### Running from Source
+### Documentation
 
-Run using [Seal](https://github.com/seal-runtime/seal) by `seal src/main.luau`
-
-### Running from Release
-
-[We often offer releases after big work milestones, here are some options for the releases!](https://github.com/RedrcknRbn/Pulus-Games/releases/)
-
-#### LUAU
-
-Run using [Seal](https://github.com/seal-runtime/seal) by `seal HungerGames_src.luau`
-
-#### BINARY
-
-Execute `HungerGames_x64.exe`
+For further explanation on how to run the program or modify Season Data, please visit the [Documentation Wiki!](https://github.com/RedrcknRbn/Hunger-Games-Simulator/wiki)
 
 ## Explanation
 
